@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Session 4 - Task 3</title>
+</head>
+
+<body>
+
+    <h2>Offer Eligibility Checker</h2>
+
+    <script>
+
+        // Function to Check Offer Eligibility
+        function isEligibleForOffer(age, totalOrderValue)
+        {
+            // Check Both Conditions
+            if (age >= 18 && totalOrderValue > 500)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        // Accept User Age
+        let age = parseInt(prompt("Enter Your Age"));
+
+        // Accept Total Order Value
+        let totalOrderValue = parseFloat(prompt("Enter Total Order Value"));
+
+        // Function Call
+        let result = isEligibleForOffer(age, totalOrderValue);
+
+        // Display Result
+        document.write("<h2>Offer Eligibility Result</h2>");
+
+        document.write("<b>Age :</b> " + age + "<br><br>");
+
+        document.write("<b>Total Order Value :</b> ₹" + totalOrderValue + "<br><br>");
+
+        document.write("<b>Eligible :</b> " + result);
+
+    </script>
+
+</body>
+
+</html>

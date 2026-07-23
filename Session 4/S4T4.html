@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Session 4 - Task 4</title>
+</head>
+
+<body>
+
+    <h2>Instagram Trending Post Checker</h2>
+
+    <script>
+
+        // Accept Number of Likes
+        let likes = parseInt(prompt("Enter Number of Likes"));
+
+        // Accept Number of Comments
+        let comments = parseInt(prompt("Enter Number of Comments"));
+
+        // Accept Number of Shares
+        let shares = parseInt(prompt("Enter Number of Shares"));
+
+        // Check Trending Condition
+        let isTrending = (likes >= 1000) || (comments > 200 && shares >= 50);
+
+        // Display Heading
+        document.write("<h2>Instagram Trending Result</h2>");
+
+        // Display Input Values
+        document.write("<b>Likes :</b> " + likes + "<br><br>");
+
+        document.write("<b>Comments :</b> " + comments + "<br><br>");
+
+        document.write("<b>Shares :</b> " + shares + "<br><br>");
+
+        // Display Result
+        if(isTrending)
+        {
+            document.write("<h3>Result : Trending Post</h3>");
+        }
+        else
+        {
+            document.write("<h3>Result : Not Trending</h3>");
+        }
+
+    </script>
+
+</body>
+
+</html>

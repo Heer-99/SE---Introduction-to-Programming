@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Session 4 - Task 2</title>
+</head>
+
+<body>
+
+    <h2>Flipkart Discount Calculator</h2>
+
+    <script>
+
+        // Function to Calculate Final Price
+        function calculateFinalPrice(productPrice, discountPercentage, isMember)
+        {
+            // Calculate Discount Amount
+            let discountAmount = (productPrice * discountPercentage) / 100;
+
+            // Price After Normal Discount
+            let finalPrice = productPrice - discountAmount;
+
+            // Apply Extra 5% Discount for Members
+            if(isMember == true)
+            {
+                finalPrice = finalPrice - (finalPrice * 5 / 100);
+            }
+
+            // Return Final Price
+            return finalPrice;
+        }
+
+        // User Input
+        let productPrice = parseFloat(prompt("Enter Product Price"));
+
+        let discountPercentage = parseFloat(prompt("Enter Discount Percentage"));
+
+        let memberInput = prompt("Are you a Member? (yes/no)");
+
+        let isMember = (memberInput.toLowerCase() == "yes");
+
+        // Function Call
+        let finalBill = calculateFinalPrice(productPrice, discountPercentage, isMember);
+
+        // Display Result
+        document.write("<h2>Flipkart Discount Calculator</h2>");
+
+        document.write("<b>Product Price :</b> ₹" + productPrice + "<br><br>");
+
+        document.write("<b>Discount :</b> " + discountPercentage + "%<br><br>");
+
+        document.write("<b>Member :</b> " + isMember + "<br><br>");
+
+        document.write("<b>Final Price :</b> ₹" + finalBill.toFixed(2));
+
+    </script>
+
+</body>
+
+</html>

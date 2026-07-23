@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Session 4 - Task 1</title>
+</head>
+
+<body>
+
+    <h2>Simple Bill Calculator</h2>
+
+    <script>
+
+        // Function to Calculate Total Bill Amount
+        function calculateTotal(itemPrice, quantity)
+        {
+            // Calculate Total Amount
+            let total = itemPrice * quantity;
+
+            // Return Total Amount
+            return total;
+        }
+
+        // Variables
+        let itemPrice = 250;
+        let quantity = 4;
+
+        // Function Call
+        let totalBill = calculateTotal(itemPrice, quantity);
+
+        // Display Output
+        document.write("<h3>Bill Details</h3>");
+        document.write("Item Price : ₹" + itemPrice + "<br>");
+        document.write("Quantity : " + quantity + "<br>");
+        document.write("Total Bill : ₹" + totalBill);
+
+    </script>
+
+</body>
+
+</html>
